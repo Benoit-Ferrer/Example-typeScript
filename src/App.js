@@ -1,15 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import './example'
+import React from "react";
+import logo from "./logo.svg";
+import "./App.scss";
+import "./example";
+import { ExampleSass } from "./sass";
 
 function App() {
   return (
     <div className="App">
+       <ExampleSass />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+       
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          Edit <code>src/App.tsx</code> and save to reload.dsd
         </p>
         <a
           className="App-link"
@@ -20,7 +23,6 @@ function App() {
           Learn React
         </a>
       </header>
-  
     </div>
   );
 }

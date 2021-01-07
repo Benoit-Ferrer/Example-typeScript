@@ -1,0 +1,46 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+// Mixin
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+// Extend/Inheritance
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+
+.container {
+  .sass-title {
+    background-color: red;
+    font: 100% $font-stack;
+    color: $primary-color;
+  }
+  .content {
+    background-color: blue;
+    display: flex;
+
+    .inContent {
+      background-color: green;
+      margin-left: 40px;
+    }
+  }
+  .box {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+    @include transform(rotate(30deg));
+  }
+  .message {
+    @extend %message-shared;
+  }
+}
