@@ -25,6 +25,9 @@ $primary-color: #333;
   .content {
     background-color: blue;
     display: flex;
+    @media screen and (max-width: 640px) {
+       background-color: blueviolet;
+      }
 
     .inContent {
       background-color: green;
